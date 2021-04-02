@@ -1,4 +1,6 @@
 import React from "react";
+import "./navigation.css";
+import Justify from "../Components/justify";
 
 const Navigation = () => {
   return (
@@ -8,7 +10,7 @@ const Navigation = () => {
         <div>Name</div>
       </div>
 
-      <div>Justify</div>
+      <Justify />
     </div>
   );
 };
