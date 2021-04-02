@@ -42,6 +42,9 @@ const Product = () => {
         ensuring durability and longevity. */}
       </div>
 
+      <Spacer />
+      <Spacer />
+
       <div className="button_container">
         <Button name={<InsideButton />} className="primary" />
         <Spacer />
