@@ -1,1 +1,1 @@
-"# Fast-Checkout-clone" 
+# Fast Checkout clone
