@@ -6,15 +6,19 @@
   outline: none;
   border: 1px solid transparent;
   align-items: center;
+  transition: transform 80ms ease-in;
+}
+
+.primary:focus,
+.secondary:focus,
+.tertiary:focus {
+  outline: none;
 }
 
 .primary:active,
-.primary:focus,
 .secondary:active,
-.secondary:focus,
-.tertiary:active,
-.tertiary:focus {
-  outline: none;
+.tertiary:active {
+  transform: scale(0.95);
 }
 
 .primary {
@@ -36,7 +40,7 @@
   color: red;
 }
 
-.inside_button{
+.inside_button {
   display: flex;
   align-items: center;
   justify-content: center;
