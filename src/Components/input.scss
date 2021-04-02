@@ -1,0 +1,56 @@
+.label_input {
+  display: flex;
+  flex-direction: column;
+  // border-bottom: 1px solid #d0d0d0;
+  position: relative;
+  padding: 15px 0 0;
+  align-items: center;
+
+  label,
+  input {
+    display: inline-block;
+    transition: all 150ms;
+  }
+
+  input {
+    color: black;
+    font-size: 25px;
+    outline: none;
+    border: 1px solid transparent;
+    margin-top: 5px;
+    padding: 6px 0;
+    line-height: 20px;
+    color: #222;
+    width: 100%;
+    font-weight: 500;
+
+    &:valid + label {
+      transform: translateY(-17px) scale(0.75);
+    }
+
+    &:focus + label {
+      transform: translateY(-17px) scale(0.75);
+    }
+
+    &:focus {
+      outline: none;
+
+      + label {
+      }
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    padding: 10px 0 0;
+    line-height: 20px;
+    font-size: 14px;
+    letter-spacing: 0.125em;
+    color: #8c8a8a;
+    pointer-events: none;
+    transform-origin: left center;
+    transform: translateY(0) scale(1);
+  }
+}
