@@ -1,0 +1,28 @@
+
+.shippng {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .free_shipping,
+  .expedited_shipping {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    background-color: white;
+  }
+  
+  .shipping_item {
+  }
+  
+  .shipping_select {
+  }
+  
+  .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    border: 2px solid #d5d2d2;
+    /* background: linear-gradient(to bottom, #40b3ff, #09f); */
+  }
