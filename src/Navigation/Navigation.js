@@ -6,8 +6,15 @@ const Navigation = () => {
   return (
     <div className="navigation">
       <div className="company_detail">
-        <div>Logo</div>
-        <div>Name</div>
+        <div className="company_logo">
+          <img
+            src="https://www.oster.ca/on/demandware.static/Sites-oster-ca-Site/-/default/dw516b4444/images/logo.png"
+            alt="image"
+            className="logo"
+          />
+        </div>
+
+        {/* <div className="company_name">Oster</div> */}
       </div>
 
       <Justify />
