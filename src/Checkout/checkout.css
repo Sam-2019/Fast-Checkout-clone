@@ -1,0 +1,27 @@
+.checkout {
+  background-color: #d5d2d2;
+}
+
+.company_price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select {
+  background-color: tomato;
+  padding: 10px;
+}
+
+.form-wrapper {
+  background-color: white;
+}
+
+.terms {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.term_item {
+  text-decoration: underline;
+}
