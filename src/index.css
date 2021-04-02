@@ -10,3 +10,7 @@
   -webkit-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
 }
+
+.item {
+  border: 1px solid red;
+}
