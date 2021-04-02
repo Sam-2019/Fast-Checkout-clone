@@ -3,6 +3,8 @@ import Input from "../Components/input";
 import Button from "../Components/button";
 import Lock from "../Components/lock";
 import Spacer from "../Components/Spacer";
+import Success from "../Components/success";
+import Terms from "../Terms/Terms";
 import "./checkout.css";
 
 const Checkout = () => {
@@ -13,7 +15,7 @@ const Checkout = () => {
       <div className="company_price">
         <div>Company Name</div>
 
-        <div className='select'>
+        <div className="select">
           <select
             className="input"
             value={value}
@@ -27,10 +29,12 @@ const Checkout = () => {
             <option value="mango">Mango</option>
           </select>
         </div>
-        
       </div>
 
-      <form className="form-wrapper">
+      <Spacer />
+      <Spacer />
+
+      <form className="form-wrapper item">
         <Input label="Email" />
 
         <div style={{ display: "flex" }}>
@@ -105,20 +109,17 @@ const Checkout = () => {
       <Spacer />
       <Spacer />
 
-      <div className="terms">
-        By clicking the button below you agree to our
-        <div>
-          <span className="term_item">Terms,</span>
-          {""} <span className="term_item">Privacy Policy</span>
-          {""}and {""}
-          <span className="term_item">Cookie Policy</span>
-        </div>
-      </div>
+  
+      <Spacer />
 
-      <Spacer />
-      <Spacer />
-      <div className="button_container">
-        <Button name={<InsideButton />} className="primary" />
+      <div className="terms_button">
+        <Terms />
+
+        <Spacer />
+        <Spacer />
+        <div className="button_container">
+          <Button name={<InsideButton />} className="primary" />
+        </div>
       </div>
     </div>
   );
