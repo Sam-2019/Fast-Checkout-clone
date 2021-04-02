@@ -17,18 +17,23 @@
 .name_price {
   display: flex;
   justify-content: space-between;
+  
 }
 
 .product_name {
   font-weight: 500;
+  font-size: 20px;
 }
 
 .product_price {
   color: gray;
+  font-size: 20px;
+  font-weight: 500;
 }
 
-.product_decription {
+.product_description{
   text-align: justify;
+  font-size: 18px;
 }
 
 .button_container {
