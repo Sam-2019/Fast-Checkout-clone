@@ -1,11 +1,13 @@
 .checkout {
   background-color: #d5d2d2;
+  padding: 15px 0px;
 }
 
 .company_price {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
 }
 
 .select {
@@ -17,11 +19,8 @@
   background-color: white;
 }
 
-.terms {
-  text-align: center;
-  margin: 0 auto;
+
+.terms_button {
+  background-color: white;
 }
 
-.term_item {
-  text-decoration: underline;
-}
