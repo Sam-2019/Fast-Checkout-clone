@@ -1,7 +1,14 @@
 import React from "react";
 import Button from "../Components/button";
 import Spacer from "../Components/Spacer";
+import Lock from "../Components/lock";
 import "./product.css";
+
+const InsideButton = () => (
+  <div className="inside_button">
+    <Lock /> {"  "} Fast Checkout
+  </div>
+);
 
 const Product = () => {
   return (
@@ -24,7 +31,7 @@ const Product = () => {
         Dual Direction Blade technology to chop, blend and grind with precision.
         Create perfect salsas, soups and sauces with the next generation of
         Oster® blender technology. Take your favourite smoothie to go; the
-        Oster® Pro™ includes two portable smoothie cups.{" "}
+        Oster® Pro™ includes two portable smoothie cups.
         {/* The Oster® Pro™
         Performance Blender brings a powerful 1200 watts and 7 speeds to your
         kitchen. This blender includes three pre-programmed settings, making it
@@ -36,7 +43,7 @@ const Product = () => {
       </div>
 
       <div className="button_container">
-        <Button name="Fast Checkout" className="primary" />
+        <Button name={<InsideButton />} className="primary" />
         <Spacer />
         <Button name="Add to cart" className="secondary" />
       </div>
