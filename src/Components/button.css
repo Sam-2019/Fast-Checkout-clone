@@ -5,6 +5,7 @@
   border-radius: 5px;
   outline: none;
   border: 1px solid transparent;
+  align-items: center;
 }
 
 .primary:active,
@@ -33,4 +34,10 @@
 
 .cancel {
   color: red;
+}
+
+.inside_button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
