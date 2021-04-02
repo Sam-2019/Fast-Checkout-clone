@@ -23,8 +23,10 @@ const Product = () => {
 
       <div className="name_price">
         <div className="product_name">Oster® Pro™ Blender</div>
-        <div className="product_price">$500</div>
+        <div className="product_price">$500.99</div>
       </div>
+
+      <Spacer />
 
       <div className="product_description">
         One of the best blenders on the market today, the Oster® Pro™ relies
