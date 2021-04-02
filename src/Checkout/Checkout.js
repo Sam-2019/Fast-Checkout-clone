@@ -3,7 +3,7 @@ import Input from "../Components/input";
 import Button from "../Components/button";
 import Lock from "../Components/lock";
 import Spacer from "../Components/Spacer";
-import Success from "../Components/success";
+import Shipping from "../Shipping/Shipping";
 import Terms from "../Terms/Terms";
 import "./checkout.css";
 
@@ -109,7 +109,8 @@ const Checkout = () => {
       <Spacer />
       <Spacer />
 
-  
+      <Shipping />
+
       <Spacer />
 
       <div className="terms_button">
