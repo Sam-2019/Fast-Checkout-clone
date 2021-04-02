@@ -1,7 +1,7 @@
 import React from "react";
 import Success from "../Components/success";
 import Spacer from "../Components/Spacer";
-import "./shipping";
+import "./shipping.css";
 
 const Shipping = () => {
   return (
