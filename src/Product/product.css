@@ -1,0 +1,36 @@
+.product_detail {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.image_container {
+  text-align: center;
+}
+
+.product_image {
+  border-radius: 10%;
+  width: 300px;
+}
+
+.name_price {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product_name {
+  font-weight: 500;
+}
+
+.product_price {
+  color: gray;
+}
+
+.product_decription {
+  text-align: justify;
+}
+
+.button_container {
+  display: flex;
+  flex-direction: column;
+}
