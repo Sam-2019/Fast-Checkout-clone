@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding: 15px 15px;
 }
 
 .image_container {
