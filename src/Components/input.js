@@ -1,14 +1,24 @@
 import React from "react";
-import "./input.css";
+import "./input.scss";
 
-const Input = ({ value, onChange, placeholder }) => {
+const Input = ({ value, onChange, label, type }) => {
   return (
-    <input
-      value={value}
-      className="input"
-      onChange={onChange}
-      placeholder={placeholder}
-    />
+    <>
+      <div className="label_input">
+        <input
+          value={value}
+          className="input"
+          onChange={onChange}
+          type={type}
+          id={label}
+          required
+          autoComplete="off"
+        />
+        <label className="label" htmlFor="label">
+          {label}
+        </label>
+      </div>
+    </>
   );
 };
 
