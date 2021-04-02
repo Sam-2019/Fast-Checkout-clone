@@ -7,8 +7,8 @@ import Checkout from "./Checkout/Checkout";
 const App = () => {
   return (
     <div className="body">
-      {/* <Navigation />
-      <Product /> */}
+      <Navigation />
+      <Product />
       <Checkout />
 
       {/* <Button name="Fast Checkout" className="primary" />
