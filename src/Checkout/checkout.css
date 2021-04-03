@@ -1,6 +1,5 @@
 .checkout {
   background-color: #d5d2d2;
-  padding: 15px 0px;
 }
 
 .company_price {
@@ -8,19 +7,21 @@
   justify-content: space-between;
   align-items: center;
   background-color: white;
+  padding: 15px;
 }
 
 .select {
-  background-color: tomato;
-  padding: 10px;
+  background-color: #eee;
+  border: 1px solid transparent;
+  outline: none;
+  border-radius: 10px;
+  padding: 5px 15px;
 }
 
 .form-wrapper {
   background-color: white;
 }
 
-
 .terms_button {
   background-color: white;
 }
-
