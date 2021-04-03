@@ -1,7 +1,7 @@
 import React from "react";
 import Spacer from "../Components/Spacer";
 import Check from "../Components/Check";
-import Circle from "../SVGs/Circle";
+import Circle from "../Components/Circle";
 import "./shipping.css";
 
 const Shipping = () => {
