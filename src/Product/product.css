@@ -36,8 +36,16 @@
   font-size: 18px;
 }
 
-.button_container {
+.button_container_column {
   display: flex;
   flex-direction: column;
   padding: 0 10px;
 }
+
+.button_container_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
