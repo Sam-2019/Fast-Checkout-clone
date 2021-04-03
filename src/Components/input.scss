@@ -12,13 +12,15 @@
     transition: all 150ms;
   }
 
+
+
   input {
     color: black;
     font-size: 25px;
     outline: none;
     border: 1px solid transparent;
     margin-top: 5px;
-    padding: 6px 0;
+    padding: 6px 0 0 6px;
     line-height: 20px;
     color: #222;
     width: 100%;
@@ -44,7 +46,7 @@
     position: absolute;
     top: 12px;
     left: 0px;
-    padding: 10px 0 0;
+    padding: 10px 10px 0;
     line-height: 20px;
     font-size: 14px;
     letter-spacing: 0.125em;
