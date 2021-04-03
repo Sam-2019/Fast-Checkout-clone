@@ -1,18 +1,36 @@
 import React from "react";
+import Check from "./Check";
 
-const success = () => {
+const Success = () => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="25"
-      height="25"
-      fill="currentColor"
-      className="bi bi-check-circle-fill"
-      viewBox="0 0 16 16"
+    <div
+      style={{
+        position: "fixed",
+        left: "0",
+        right: "0",
+        top: "0",
+        bottom: "0",
+        transition: "all ease 0.7s",
+        animation: "fade-in",
+        animationDuration: "0.5s",
+        animationDelay: "0s",
+        animationFillMode: "forwards",
+        backgroundColor: "white",
+        display: "flex",
+        justifyContent: "center",
+      }}
     >
-      <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-    </svg>
+      <div
+        style={{
+          margin: "auto",
+          backgroundColor: "#ffffff",
+          transition: "all 0.6s ease-in-out",
+        }}
+      >
+        <Check width={100} height={100}  color="green" />
+      </div>
+    </div>
   );
 };
 
-export default success;
+export default Success;
