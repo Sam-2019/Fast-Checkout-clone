@@ -12,7 +12,7 @@ const Checkout = () => {
   return (
     <div className="checkout">
       <div className="company_price">
-        <div>Company Name</div>
+           <div className="company_name">Oster Products</div>
 
         <div className='select_wrapper'>
         <img
