@@ -1,14 +1,12 @@
 import React from "react";
 
-let size = 30;
-
-const Check = () => {
+const Check = ({width, height, color}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={size}
-      height={size}
-      fill="green"
+      width={width}
+      height={height}
+      fill={color}
       className="bi bi-check-circle-fill"
       viewBox="0 0 16 16"
     >
