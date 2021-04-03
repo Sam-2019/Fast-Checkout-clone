@@ -1,6 +1,5 @@
 import React from "react";
 import Spacer from "../Components/Spacer";
-
 import Check from "../Components/Check";
 import Circle from "../SVGs/Circle";
 import "./shipping.css";
