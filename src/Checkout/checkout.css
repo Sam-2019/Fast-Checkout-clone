@@ -10,12 +10,24 @@
   padding: 15px;
 }
 
+.select_wrapper {
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 5px 5px  5px 15px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 .select {
   background-color: #eee;
   border: 1px solid transparent;
   outline: none;
-  border-radius: 10px;
-  padding: 5px 15px;
+}
+
+.option-image {
+  width: 30px;
+  border-radius: 50%;
 }
 
 .form-wrapper {
