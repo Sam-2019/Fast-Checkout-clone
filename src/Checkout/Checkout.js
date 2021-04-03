@@ -8,16 +8,15 @@ import Terms from "../Terms/Terms";
 import "./checkout.css";
 
 const Checkout = () => {
-  const [loading, setLoading] = React.useState(true);
   const [value, setValue] = React.useState("Pick your location");
   return (
     <div className="checkout">
       <div className="company_price">
         <div>Company Name</div>
 
-        <div className="select">
+     
           <select
-            className="input"
+            className="select"
             value={value}
             onChange={(e) => {
               setValue(e.target.value);
@@ -28,13 +27,18 @@ const Checkout = () => {
             <option value="coconut">Coconut</option>
             <option value="mango">Mango</option>
           </select>
-        </div>
+   
       </div>
 
-      <Spacer />
-      <Spacer />
+      <Spacer
+        top={5}
+        bottom={0}
+        right={0}
+        left={0}
+        selected_unit="percentage"
+      />
 
-      <form className="form-wrapper item">
+      <form className="form-wrapper">
         <Input label="Email" />
 
         <div style={{ display: "flex" }}>
@@ -66,7 +70,7 @@ const Checkout = () => {
         <div style={{ display: "flex" }}>
           <div
             style={{
-              width: "75%",
+              width: "70%",
               borderBottom: "1px solid #d0d0d0",
               borderTop: "1px solid #d0d0d0",
               borderRight: "1px solid #d0d0d0",
@@ -77,7 +81,7 @@ const Checkout = () => {
 
           <div
             style={{
-              width: "25%",
+              width: "30%",
               padding: "0 0 0 10px",
               borderBottom: "1px solid #d0d0d0",
               borderTop: "1px solid #d0d0d0",
@@ -94,7 +98,7 @@ const Checkout = () => {
             borderBottom: "1px solid #d0d0d0",
           }}
         >
-          <div style={{ width: "40%" }}>
+          <div style={{ width: "40%" }} >
             <Input label="Credit Card" />
           </div>
 
@@ -106,18 +110,30 @@ const Checkout = () => {
         </div>
       </form>
 
-      <Spacer />
-      <Spacer />
+      <Spacer
+        bottom={5}
+        top={0}
+        right={0}
+        left={0}
+        selected_unit="percentage"
+      />
 
       <Shipping />
 
-      <Spacer />
+      <Spacer
+        bottom={5}
+        top={0}
+        right={0}
+        left={0}
+        selected_unit="percentage"
+      />
 
       <div className="terms_button">
+
+
         <Terms />
 
-        <Spacer />
-        <Spacer />
+    
         <div className="button_container">
           <Button name={<InsideButton />} className="primary" />
         </div>
