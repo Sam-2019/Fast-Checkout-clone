@@ -27,11 +27,19 @@ const OrderComplete = () => {
           }}
         >
           <Check width={40} height={40} color="white" />
-          <div>Order Complete</div>
+          <div
+            style={{
+              margin: "0 0 0 10px",
+              fontWeight: "500",
+              fontSize: "20px",
+            }}
+          >
+            Order Complete
+          </div>
         </div>
         <div
           style={{
-            color: "gray",
+            color: "white",
             fontSize: "20px",
             fontWeight: "500",
           }}
@@ -51,16 +59,17 @@ const OrderComplete = () => {
         5:36 to make changes or cancel before your card is charged.
       </div>
 
-      <div className="button_container_row">
-        <Button name="View/Cancel Order" className="tertiary " />
-        <Spacer
-          bottom={0}
-          top={0}
-          right={5}
-          left={5}
-          selected_unit="percentage"
-        />
-        <Button name="Keep Shopping" className="secondary" />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+
+          padding: "0 ",
+        }}
+      >
+        <Button name="View/Cancel Order" className="tertiary width-100 " />
+        <Spacer bottom={0} top={0} right={0} left={0} selected_unit="pixel" />
+        <Button name="Keep Shopping" className="secondary width-100 " />
       </div>
     </div>
   );

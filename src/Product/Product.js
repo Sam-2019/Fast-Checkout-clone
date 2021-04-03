@@ -57,7 +57,13 @@ const Product = () => {
         <Spacer />
       </div>
 
-      <div className="button_container">
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          padding: "0 10px",
+        }}
+      >
         <Button name={<InsideButton />} className="primary" />
         <Spacer />
         <Button name="Add to cart" className="secondary" />
