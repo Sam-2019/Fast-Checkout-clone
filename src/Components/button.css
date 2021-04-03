@@ -1,22 +1,28 @@
 .primary,
+.primary-two,
 .secondary,
+.secondary-two,
 .tertiary {
-  padding: 15px 1.5%;
   border-radius: 5px;
   outline: none;
   border: 1px solid transparent;
   align-items: center;
   transition: transform 80ms ease-in;
+  font-weight: 500;
 }
 
 .primary:focus,
+.primary-two:focus,
 .secondary:focus,
+.secondary-two:focus,
 .tertiary:focus {
   outline: none;
 }
 
 .primary:active,
+.primary-two:active,
 .secondary:active,
+.secondary-two:active,
 .tertiary:active {
   transform: scale(0.95);
 }
@@ -24,16 +30,33 @@
 .primary {
   background-color: black;
   color: white;
+  padding: 15px 1.5%;
+}
+
+.primary-two {
+  background-color: black;
+  color: white;
+  padding: 7px 1.5%;
+  width: 25%;
+  text-align: center;
 }
 
 .secondary {
   background-color: white;
   color: black;
+  padding: 15px 1.5%;
+}
+
+.secondary-two {
+  background-color: white;
+  color: rgb(239, 23, 23);
+  padding: 5px 0;
 }
 
 .tertiary {
-  background-color: #ffffff70;
-  color: rgb(152, 144, 144);
+  background-color: #016701;
+  color: #ffffff;
+  padding: 5px 1.5%;
 }
 
 .cancel {
@@ -44,4 +67,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.width-30 {
+  width: 30%;
 }
