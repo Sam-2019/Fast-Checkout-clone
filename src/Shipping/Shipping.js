@@ -14,7 +14,7 @@ const Shipping = () => {
   }
 
   return (
-    <div className="shippng item">
+    <div className="shippng">
       <div className="free_shipping">
         <div className="shipping_item">Free Shipping</div>
 
