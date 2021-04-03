@@ -1,5 +1,5 @@
 import React from "react";
-import Input from "../Components/input";
+import Form from "../Form/Form";
 import Button from "../Components/button";
 import Lock from "../Components/lock";
 import Spacer from "../Components/Spacer";
@@ -12,31 +12,28 @@ const Checkout = () => {
   return (
     <div className="checkout">
       <div className="company_price">
-           <div className="company_name">Oster Products</div>
+        <div className="company_name">Oster Products</div>
 
-        <div className='select_wrapper'>
-        <img
-          src="http://www.oster.ca/on/demandware.static/-/Sites-master-catalog/default/dwca5cf622/images/highres/BLSTMB-CBG2-033-2.jpg"
-          alt="product"
-          className="option-image"
-        />
+        <div className="select_wrapper">
+          <img
+            src="http://www.oster.ca/on/demandware.static/-/Sites-master-catalog/default/dwca5cf622/images/highres/BLSTMB-CBG2-033-2.jpg"
+            alt="product"
+            className="option-image"
+          />
 
           <select
-   
-          className="select"
-          value={value}
-          onChange={(e) => {
-            setValue(e.target.value);
-          }}
-        >
-         <option value="phone">Mobile</option>
-          <option value="lime">Lime</option>
-          <option value="coconut">Coconut</option>
-          <option value="mango">Mango</option>
-        </select>
+            className="select"
+            value={value}
+            onChange={(e) => {
+              setValue(e.target.value);
+            }}
+          >
+            <option value="phone">Mobile</option>
+            <option value="lime">Lime</option>
+            <option value="coconut">Coconut</option>
+            <option value="mango">Mango</option>
+          </select>
         </div>
-
-        
       </div>
 
       <Spacer
@@ -47,77 +44,7 @@ const Checkout = () => {
         selected_unit="percentage"
       />
 
-      <form className="form-wrapper">
-        <Input label="Email" />
-
-        <div style={{ display: "flex" }}>
-          <div
-            style={{
-              width: "50%",
-              borderBottom: "1px solid #d0d0d0",
-              borderTop: "1px solid #d0d0d0",
-              borderRight: "1px solid #d0d0d0",
-            }}
-          >
-            <Input label="First Name" />
-          </div>
-
-          <div
-            style={{
-              width: "50%",
-              padding: "0 0 0 10px",
-              borderBottom: "1px solid #d0d0d0",
-              borderTop: "1px solid #d0d0d0",
-            }}
-          >
-            <Input label="Last Name" />
-          </div>
-        </div>
-
-        <Input label="Phone Number" />
-
-        <div style={{ display: "flex" }}>
-          <div
-            style={{
-              width: "70%",
-              borderBottom: "1px solid #d0d0d0",
-              borderTop: "1px solid #d0d0d0",
-              borderRight: "1px solid #d0d0d0",
-            }}
-          >
-            <Input label="Delivery Address" />
-          </div>
-
-          <div
-            style={{
-              width: "30%",
-              padding: "0 0 0 10px",
-              borderBottom: "1px solid #d0d0d0",
-              borderTop: "1px solid #d0d0d0",
-            }}
-          >
-            <Input label="Line 2" />
-          </div>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            width: "100%",
-            borderBottom: "1px solid #d0d0d0",
-          }}
-        >
-          <div style={{ width: "40%" }}>
-            <Input label="Credit Card" />
-          </div>
-
-          <div style={{ width: "60%", display: "flex", flexDirection: "row" }}>
-            <Input label="MM/YY" />
-            <Input label="CVC" />
-            <Input label="ZIP" />
-          </div>
-        </div>
-      </form>
+      <Form />
 
       <Spacer
         bottom={5}
@@ -140,7 +67,13 @@ const Checkout = () => {
       <div className="terms_button">
         <Terms />
 
-        <div className="button_container">
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            padding: "0 10px",
+          }}
+        >
           <Button name={<InsideButton />} className="primary" />
         </div>
       </div>
