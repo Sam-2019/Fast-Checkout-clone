@@ -2,7 +2,9 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import Navigation from "./Navigation/Navigation";
 import Product from "./Product/Product";
-import Checkout from "./Checkout/Checkout";
+import Order from './Order/Order Complete'
+import Checkout from './Checkout/Checkout'
+
 
 const App = () => {
   return (
@@ -10,6 +12,8 @@ const App = () => {
       <Navigation />
       <Product />
       <Checkout />
+      <Order />
+
 
       {/* <Button name="Fast Checkout" className="primary" />
       <Button name="Close" className="primary" />
