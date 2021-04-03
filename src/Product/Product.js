@@ -12,11 +12,11 @@ const InsideButton = () => (
 
 const Product = () => {
   return (
-    <div className="product_detail">
+    <div className="product_detail item">
       <div className="image_container">
         <img
           src="http://www.oster.ca/on/demandware.static/-/Sites-master-catalog/default/dwca5cf622/images/highres/BLSTMB-CBG2-033-2.jpg"
-          alt="image"
+          alt="product"
           className="product_image"
         />
       </div>

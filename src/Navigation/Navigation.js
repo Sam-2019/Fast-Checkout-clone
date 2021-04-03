@@ -9,7 +9,7 @@ const Navigation = () => {
         <div className="company_logo">
           <img
             src="https://www.oster.ca/on/demandware.static/Sites-oster-ca-Site/-/default/dw516b4444/images/logo.png"
-            alt="image"
+            alt="company"
             className="logo"
           />
         </div>
