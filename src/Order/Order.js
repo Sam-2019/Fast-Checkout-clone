@@ -4,11 +4,16 @@ import Coupon from "../Components/Add Coupon";
 import OtherForm from "../Form/Another Form";
 import Shipping from "../Shipping/Shipping";
 import Spacer from "../Components/Spacer";
-import "./order.css";
+
 
 const Order = () => {
   return (
-    <div className="order">
+    <div
+      style={{
+        backgroundColor: "#d5d2d2",
+        height: "107vh",
+      }}
+    >
       <OrderComplete />
       <Coupon />
 
@@ -32,32 +37,41 @@ const Order = () => {
       <Shipping />
 
       <Spacer
-        bottom={5}
+        bottom={25}
         top={0}
         right={0}
         left={0}
         selected_unit="percentage"
       />
 
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          flexDirection: "row",
-          padding: "13px 5px",
-          borderTop: "1px solid #d0d0d0",
-          top: "auto",
-          width: "100%",
-          backgroundColor: "white",
-        }}
-      >
-        <div className="secondary-two"> Cancel Order</div>
-
-        <div className="primary-two">Close</div>
-      </div>
+      <OrderActions />
     </div>
   );
 };
 
 export default Order;
+
+export const OrderActions = () => {
+  return (
+    <div
+      style={{
+        position: "fixed",
+        top: "auto",
+        bottom: "0",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        flexDirection: "row",
+        padding: "13px 5px",
+        borderTop: "1px solid #d0d0d0",
+        top: "auto",
+        width: "100%",
+        backgroundColor: "white",
+      }}
+    >
+      <div className="secondary-two"> Cancel Order</div>
+
+      <div className="primary-two">Close</div>
+    </div>
+  );
+};
