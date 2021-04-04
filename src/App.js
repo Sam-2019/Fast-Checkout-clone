@@ -11,7 +11,7 @@ import OrderReceived from './Order/Order Received'
 const App = () => {
   return (
     <div className="body">
-      <Order />
+      <Checkout />
       
 
       {/* <Button name="Fast Checkout" className="primary" />
