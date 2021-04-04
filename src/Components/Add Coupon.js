@@ -7,7 +7,7 @@ const AddCoupon = () => {
       style={{
         display: "flex",
         alignItems: "center",
-        padding: "15px 0",
+        padding: "15px 15px",
         color: "blue",
         fontWeight: "500",
         border: "1px solid #d0d0d0",

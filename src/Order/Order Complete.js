@@ -8,7 +8,7 @@ const OrderComplete = () => {
     <div
       className="order_wrapper"
       style={{
-        padding: "20px 10px",
+        padding: "20px 15px",
         backgroundColor: "green",
         color: "white",
       }}

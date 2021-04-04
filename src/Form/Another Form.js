@@ -11,11 +11,11 @@ const Form = () => {
           style={{
             display: "flex",
             alignItems: "center",
-            padding: "10px 0",
+            padding: "10px 15px",
             border: "1px solid #d0d0d0",
           }}
         >
-          <label style={{ color: "gray", width: "30%" , padding: '0 0 0 10px' }}>User</label>
+          <label style={{ color: "gray", width: "30%" , padding: '0 0 0 0px' }}>User</label>
           <input
             style={{
               color: "black",
@@ -32,11 +32,11 @@ const Form = () => {
           style={{
             display: "flex",
             alignItems: "center",
-            padding: "10px 0",
+            padding: "10px 15px",
             border: "1px solid #d0d0d0",
           }}
         >
-          <label style={{ color: "gray", width: "30%", padding: '0 0 0 10px'  }}>Email</label>
+          <label style={{ color: "gray", width: "30%", padding: '0 0 0 0'  }}>Email</label>
           <input
             style={{
               color: "black",
@@ -71,11 +71,11 @@ const Form = () => {
           style={{
             display: "flex",
             alignItems: "center",
-            padding: "10px 0",
+            padding: "10px 15px",
             border: "1px solid #d0d0d0",
           }}
         >
-          <label style={{ color: "gray", width: "30%",  padding: '0 0 0 10px'  }}>Phone</label>
+          <label style={{ color: "gray", width: "30%",  padding: '0 0 0 0'  }}>Phone</label>
           <input
             style={{
               color: "black",
@@ -110,11 +110,11 @@ const Form = () => {
           style={{
             display: "flex",
             alignItems: "center",
-            padding: "10px 0",
+            padding: "10px 15px",
             border: "1px solid #d0d0d0",
           }}
         >
-          <label style={{ color: "gray", width: "30%",  padding: '0 0 0 10px'  }}>Ship to</label>
+          <label style={{ color: "gray", width: "30%",  padding: '0 0 0 0'  }}>Ship to</label>
           <input
             style={{
               color: "black",
@@ -149,11 +149,11 @@ const Form = () => {
           style={{
             display: "flex",
             alignItems: "center",
-            padding: "10px 0",
+            padding: "10px 15px",
             border: "1px solid #d0d0d0",
           }}
         >
-          <label style={{ color: "gray", width: "30%",  padding: '0 0 0 10px'  }}>Payment</label>
+          <label style={{ color: "gray", width: "30%",  padding: '0 0 0 0'  }}>Payment</label>
           <input
             style={{
               color: "black",
