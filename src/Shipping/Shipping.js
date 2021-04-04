@@ -1,6 +1,6 @@
 import React from "react";
 import Spacer from "../Components/Spacer";
-import Check from "../Components/Check";
+import CheckCircle from "../Components/CheckCircle";
 import Circle from "../Components/Circle";
 import "./shipping.css";
 
@@ -20,7 +20,7 @@ const Shipping = () => {
 
         <div className="shipping_select">
           <div className="" onClick={free}>
-            {state ? <Circle /> : <Check width={30} height={30}  color="white" />}
+            {state ? <Circle /> : <CheckCircle width={30} height={30}  color="green" />}
           </div>
         </div>
       </div>
@@ -30,7 +30,7 @@ const Shipping = () => {
 
         <div className="shipping_select">
           <div className="" onClick={free}>
-            {value ? <Circle /> : <Check width={30} height={30}  color="white"/>}
+            {value ? <Circle /> : <CheckCircle width={30} height={30}  color="green"/>}
           </div>
         </div>
       </div>

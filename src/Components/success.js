@@ -1,5 +1,5 @@
 import React from "react";
-import Check from "./Check";
+import CheckCircle from "./CheckCircle";
 
 const Success = () => {
   return (
@@ -27,7 +27,7 @@ const Success = () => {
           transition: "all 0.6s ease-in-out",
         }}
       >
-        <Check width={100} height={100}  color="green" />
+        <CheckCircle width={100} height={100}  color="green" />
       </div>
     </div>
   );

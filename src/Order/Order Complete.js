@@ -1,5 +1,5 @@
 import React from "react";
-import Check from "../Components/Check";
+import CheckCircle from "../Components/CheckCircle";
 import Button from "../Components/button";
 import Spacer from "../Components/Spacer";
 
@@ -26,7 +26,7 @@ const OrderComplete = () => {
             justifyContent: "flex-start",
           }}
         >
-          <Check width={40} height={40} color="white" />
+          <CheckCircle width={40} height={40} color="white" />
           <div
             style={{
               margin: "0 0 0 10px",
