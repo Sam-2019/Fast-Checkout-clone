@@ -6,9 +6,8 @@ const Terms = () => {
       style={{
         display: "flex",
         flexDirection: "column",
-        padding: "0 10px",
         textAlign: "center",
-        padding: "12px 0 6px 0",
+        padding: "12px 10px 6px",
         color: "gray",
       }}
     >

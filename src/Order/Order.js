@@ -64,7 +64,6 @@ export const OrderActions = () => {
         flexDirection: "row",
         padding: "13px 5px",
         borderTop: "1px solid #d0d0d0",
-        top: "auto",
         width: "100%",
         backgroundColor: "white",
       }}
