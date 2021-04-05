@@ -10,6 +10,8 @@ import styled from "styled-components";
 import Product from "./Product/Product";
 import Checkout from "./Checkout/Checkout";
 import Register from "./Register/Register";
+import OrderReceived from "./Order/Order Received";
+import OrderComplete from "./Order/Order Complete";
 
 const Body = styled.div`
   background-color: #ffffff34;
@@ -33,15 +35,21 @@ const App = () => {
           <Product />
         </Route>
 
+        <Route path="/orderreceived">
+          <OrderReceived />
+        </Route>
+
         <Route path="/register">
-          {token ? <Redirect to="/checkout" /> : <Register />}
+          <Register />
         </Route>
 
         <Route path="/checkout">
           <Checkout />
         </Route>
 
-    
+        <Route path="/ordercomplete">
+          <OrderComplete />
+        </Route>
       </Switch>
     </Router>
   );
