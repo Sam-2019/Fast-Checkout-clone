@@ -1,6 +1,6 @@
 import React from "react";
 import Form from "../Form/Form";
-import { InsideButton } from "../Product/Product";
+import { InsideButton } from "../Item/Item";
 import Button from "../Components/button";
 import Spacer from "../Components/Spacer";
 import Shipping from "../Shipping/Shipping";
