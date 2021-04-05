@@ -2,7 +2,6 @@ import React from "react";
 import Button from "../Components/button";
 import Spacer from "../Components/Spacer";
 import Lock from "../Components/lock";
-import "./product.css";
 
 export const InsideButton = () => (
   <div className="inside_button">
@@ -18,17 +17,43 @@ const Product = () => {
   }
   return (
     <>
-      <div className="product_detail">
-        <div className="image_container">
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          padding: "15px",
+        }}
+      >
+        <div
+          style={{
+            textAlign: "center",
+          }}
+        >
           <img
             src="http://www.oster.ca/on/demandware.static/-/Sites-master-catalog/default/dwca5cf622/images/highres/BLSTMB-CBG2-033-2.jpg"
             alt="product"
-            className="product_image"
+            style={{
+              width: "300px",
+              borderRadius: "10%",
+            }}
           />
         </div>
 
-        <div className="name_price">
-          <div className="product_name">Oster® Pro™ Blender</div>
+        <div className="name_price"
+                style={{
+                  display: "flex",
+                  justifyContent: 'space-between',
+                }}
+        
+        >
+          <div className="product_name"
+          
+          style={{
+            fontSize: "20px",
+            fontWeight: "500",
+          }}
+          >Oster® Pro™ Blender</div>
           <div
             style={{
               color: "gray",
@@ -42,7 +67,12 @@ const Product = () => {
 
         <Spacer />
 
-        <div className="product_description">
+        <div
+          style={{
+            fontSize: "20px",
+            textAlign: "justify",
+          }}
+        >
           One of the best blenders on the market today, the Oster® Pro™ relies
           Dual Direction Blade technology to chop, blend and grind with
           precision. Create perfect salsas, soups and sauces with the next
