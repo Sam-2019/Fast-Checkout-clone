@@ -1,20 +1,40 @@
 import React from "react";
-import "./navigation.css";
 import Justify from "../Components/justify";
 
 const Navigation = () => {
   return (
-    <div className="navigation">
-      <div className="company_detail">
+    <div
+      style={{
+        backgroundColor: "white",
+        borderBottom: "1px solid #b7b6b6",
+        padding: "15px",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+        }}
+      >
         <div className="company_logo">
           <img
             src="https://www.oster.ca/on/demandware.static/Sites-oster-ca-Site/-/default/dw516b4444/images/logo.png"
             alt="company"
-            className="logo"
+            style={{
+              width: "100px",
+            }}
           />
         </div>
 
-        {/* <div className="company_name">Oster</div> */}
+        {/* <div 
+                style={{
+       fontWeight: '500'
+        }}
+        >Oster</div> */}
       </div>
 
       <Justify />
