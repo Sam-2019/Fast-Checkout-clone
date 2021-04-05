@@ -1,7 +1,5 @@
 import React from "react";
-import Button from "../Components/button";
 import Down from "../Components/chevronDown";
-import Shipping from "../Shipping/Shipping";
 
 const Form = () => {
   return (
