@@ -1,6 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import styled from "styled-components";
 import Product from "./Product/Product";
 import Checkout from "./Checkout/Checkout";
@@ -18,6 +23,8 @@ const Body = styled.div`
   transition: all ease-in-out 0.5s;
 `;
 
+const token = localStorage.getItem("fastcheckout");
+
 const App = () => {
   return (
     <Router>
@@ -27,24 +34,17 @@ const App = () => {
         </Route>
 
         <Route path="/register">
-          <Register />
+          {token ? <Redirect to="/checkout" /> : <Register />}
         </Route>
 
         <Route path="/checkout">
           <Checkout />
         </Route>
+
+    
       </Switch>
     </Router>
   );
 };
 
 export default App;
-
-{
-  /* <Button name="Fast Checkout" className="primary" />
-      <Button name="Close" className="primary" />
-      <Button name="Cancel Order" className="secondary cancel" />
-      <Button name="View/Cancel Order" className="tertiary" />
-      <Button name="Keep Shopping" className="secondary" />
-      <Button name="Add to cart" className="secondary" /> */
-}
