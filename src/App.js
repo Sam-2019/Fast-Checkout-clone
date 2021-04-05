@@ -6,13 +6,12 @@ import Checkout from "./Checkout/Checkout";
 import Form from "./Form/Another Form";
 import Coupon from "./Components/Add Coupon";
 import Order from "./Order/Order";
-import OrderReceived from './Order/Order Received'
+import OrderReceived from "./Order/Order Received";
 
 const App = () => {
   return (
     <div className="body">
-      <Checkout />
-      
+      <Product />
 
       {/* <Button name="Fast Checkout" className="primary" />
       <Button name="Close" className="primary" />
@@ -20,7 +19,6 @@ const App = () => {
       <Button name="View/Cancel Order" className="tertiary" />
       <Button name="Keep Shopping" className="secondary" />
       <Button name="Add to cart" className="secondary" /> */}
-      
     </div>
   );
 };
