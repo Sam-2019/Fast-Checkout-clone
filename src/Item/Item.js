@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import Button from "../Components/button";
 import Spacer from "../Components/Spacer";
 import Lock from "../Components/lock";
@@ -11,10 +12,21 @@ export const InsideButton = () => (
 
 const Item = () => {
   const [loading, setLoading] = React.useState(false);
+  let history = useHistory();
 
   function buy() {
-    setLoading(true);
+    const token = localStorage.getItem("fastcheckout");
+    
+
+    if (token) {
+      return;
+    }
+
+    if (!token) {
+      history.push("/register");
+    }
   }
+
   return (
     <>
       <div
@@ -40,20 +52,22 @@ const Item = () => {
           />
         </div>
 
-        <div className="name_price"
-                style={{
-                  display: "flex",
-                  justifyContent: 'space-between',
-                }}
-        
-        >
-          <div className="product_name"
-          
+        <div
+          className="name_price"
           style={{
-            fontSize: "20px",
-            fontWeight: "500",
+            display: "flex",
+            justifyContent: "space-between",
           }}
-          >Oster® Pro™ Blender</div>
+        >
+          <div
+            className="product_name"
+            style={{
+              fontSize: "20px",
+              fontWeight: "500",
+            }}
+          >
+            Oster® Pro™ Blender
+          </div>
           <div
             style={{
               color: "gray",
