@@ -15,16 +15,18 @@ const Item = () => {
   let history = useHistory();
 
   function buy() {
-    const token = localStorage.getItem("fastcheckout");
-    
+    setLoading(true);
+    history.push("/register");
 
-    if (token) {
-      return;
-    }
+    setLoading(false);
 
-    if (!token) {
-      history.push("/register");
-    }
+    // if (token) {
+    //   return;
+    // }
+
+    // if (!token) {
+
+    // }
   }
 
   return (
