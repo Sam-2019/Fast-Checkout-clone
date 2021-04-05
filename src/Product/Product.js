@@ -2,7 +2,6 @@ import React from "react";
 import Button from "../Components/button";
 import Spacer from "../Components/Spacer";
 import Lock from "../Components/lock";
-import Spinner from "../Components/spinner";
 import "./product.css";
 
 export const InsideButton = () => (
@@ -12,8 +11,11 @@ export const InsideButton = () => (
 );
 
 const Product = () => {
-
   const [loading, setLoading] = React.useState(false);
+
+  function buy() {
+    setLoading(true);
+  }
   return (
     <>
       <div className="product_detail">
@@ -67,7 +69,12 @@ const Product = () => {
           padding: "0 10px",
         }}
       >
-        <Button name={<InsideButton />} className="primary" />
+        <Button
+          name={<InsideButton />}
+          className="primary"
+          loading={loading}
+          action={buy}
+        />
         <Spacer />
         <Button name="Add to cart" className="secondary" />
       </div>
