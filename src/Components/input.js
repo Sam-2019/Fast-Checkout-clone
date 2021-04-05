@@ -1,7 +1,7 @@
 import React from "react";
 import "./input.scss";
 
-const Input = ({ value, setValue, label, type }) => {
+const Input = ({ value, setValue, label, type, readOnly }) => {
   return (
     <>
       <div className="label_input">
@@ -13,6 +13,7 @@ const Input = ({ value, setValue, label, type }) => {
           id={label}
           required
           autoComplete="off"
+          readOnly={readOnly}
         />
         <label className="label" htmlFor="label">
           {label}
