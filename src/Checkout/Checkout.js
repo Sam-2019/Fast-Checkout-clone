@@ -2,11 +2,9 @@ import React from "react";
 import Form from "../Form/Form";
 import { InsideButton } from "../Product/Product";
 import Button from "../Components/button";
-import Lock from "../Components/lock";
 import Spacer from "../Components/Spacer";
 import Shipping from "../Shipping/Shipping";
 import Terms from "../Terms/Terms";
-import Spinner from "../Components/spinner";
 import "./checkout.css";
 
 const Checkout = () => {
@@ -82,7 +80,7 @@ const Checkout = () => {
           }}
         >
           <Button
-            name={loading ? <Spinner /> : <InsideButton />}
+            name={<InsideButton />}
             className="primary"
             loading={loading}
             action={checkout}
