@@ -1,12 +1,10 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import styled from "styled-components";
 import Product from "./Product/Product";
 import Checkout from "./Checkout/Checkout";
-import Form from "./Form/Another Form";
-import Coupon from "./Components/Add Coupon";
-import Order from "./Order/Order";
-import OrderReceived from "./Order/Order Received";
+import Register from "./Register/Register";
 
 const Body = styled.div`
   background-color: #ffffff34;
@@ -22,17 +20,31 @@ const Body = styled.div`
 
 const App = () => {
   return (
-    <Body>
-      <Product />
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Product />
+        </Route>
 
-      {/* <Button name="Fast Checkout" className="primary" />
-      <Button name="Close" className="primary" />
-      <Button name="Cancel Order" className="secondary cancel" />
-      <Button name="View/Cancel Order" className="tertiary" />
-      <Button name="Keep Shopping" className="secondary" />
-      <Button name="Add to cart" className="secondary" /> */}
-    </Body>
+        <Route path="/register">
+          <Register />
+        </Route>
+
+        <Route path="/checkout">
+          <Checkout />
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 
 export default App;
+
+{
+  /* <Button name="Fast Checkout" className="primary" />
+      <Button name="Close" className="primary" />
+      <Button name="Cancel Order" className="secondary cancel" />
+      <Button name="View/Cancel Order" className="tertiary" />
+      <Button name="Keep Shopping" className="secondary" />
+      <Button name="Add to cart" className="secondary" /> */
+}
