@@ -1,11 +1,11 @@
 import React from "react";
-import styled from 'styled-components'
+import styled from "styled-components";
 import { InsideButton } from "../Item/Item";
 import Button from "../Components/button";
 import Spacer from "../Components/Spacer";
 import Shipping from "../Shipping/Shipping";
 import Terms from "../Terms/Terms";
-import Input from "../Components/input2";
+import Down from "../Components/chevronDown";
 import Success from "../Components/success";
 import "./checkout.css";
 
@@ -73,6 +73,7 @@ const Checkout = () => {
               <option value="coconut">Coconut</option>
               <option value="mango">Mango</option>
             </select>
+            
           </div>
         </div>
 
@@ -84,84 +85,198 @@ const Checkout = () => {
           selected_unit="percentage"
         />
 
-        <form className="form-wrapper">
-          <div>
-            <Input label="Email" defaultValue={token.email} />
-          </div>
-
-          <div style={{ display: "flex" }}>
-            <div
-              style={{
-                width: "50%",
-                borderBottom: "1px solid #d0d0d0",
-                borderTop: "1px solid #d0d0d0",
-                borderRight: "1px solid #d0d0d0",
-              }}
+        <form className="form-wrapper" style={{ fontWeight: "500" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              padding: "10px 15px",
+              border: "1px solid #d0d0d0",
+            }}
+          >
+            <label
+              style={{ color: "gray", width: "30%", padding: "0 0 0 0px" }}
             >
-              <Input label="First Name" defaultValue={token.fname} />
-            </div>
-
-            <div
+              User
+            </label>
+            <input
               style={{
-                width: "50%",
-                padding: "0 0 0 10px",
-                borderBottom: "1px solid #d0d0d0",
-                borderTop: "1px solid #d0d0d0",
-              }}
-            >
-              <Input label="Last Name" defaultValue={token.lname} />
-            </div>
-          </div>
-
-          <div>
-            <Input
-              label="Phone Number"
-              defaultValue={token.number}
-              type="number"
-            />
-          </div>
-
-          <div style={{ display: "flex" }}>
-            <div
-              style={{
+                color: "black",
                 width: "70%",
-                borderBottom: "1px solid #d0d0d0",
-                borderTop: "1px solid #d0d0d0",
-                borderRight: "1px solid #d0d0d0",
+                outline: "none",
+                border: "1px solid transparent",
               }}
-            >
-              <Input label="Delivery Address" defaultValue={token.delivery} />
-            </div>
+              placeholder="Alex Swift"
+              defaultValue={`${token.fname} ${token.lname}`}
+            />
+            <div style={{ color: "blue", width: "10%" }}>Edit</div>
+          </div>
 
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              padding: "10px 15px",
+              border: "1px solid #d0d0d0",
+            }}
+          >
+            <label style={{ color: "gray", width: "30%", padding: "0 0 0 0" }}>
+              Email
+            </label>
+            <input
+              style={{
+                color: "black",
+                width: "70%",
+                outline: "none",
+                border: "1px solid transparent",
+              }}
+              placeholder="alex@gmail.com"
+              defaultValue={`${token.email} `}
+            />
             <div
               style={{
-                width: "30%",
-                padding: "0 0 0 10px",
-                borderBottom: "1px solid #d0d0d0",
-                borderTop: "1px solid #d0d0d0",
+                width: "10%",
               }}
             >
-              <Input label="Line 2" defaultValue={token.line} />
+              <div
+                style={{
+                  width: "23px",
+                  height: "23px",
+                  backgroundColor: "#d5d2d2",
+                  borderRadius: "50%",
+                  padding: "4px",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <Down />
+              </div>
             </div>
           </div>
 
           <div
             style={{
               display: "flex",
-              width: "100%",
-              borderBottom: "1px solid #d0d0d0",
+              alignItems: "center",
+              padding: "10px 15px",
+              border: "1px solid #d0d0d0",
             }}
           >
-            <div style={{ width: "40%" }}>
-              <Input label="Credit Card" defaultValue={token.creditCard} />
-            </div>
-
+            <label style={{ color: "gray", width: "30%", padding: "0 0 0 0" }}>
+              Phone
+            </label>
+            <input
+              style={{
+                color: "black",
+                width: "70%",
+                outline: "none",
+                border: "1px solid transparent",
+              }}
+              placeholder="+1 (555) 555-5555"
+              defaultValue={`${token.number} `}
+            />
             <div
-              style={{ width: "60%", display: "flex", flexDirection: "row" }}
+              style={{
+                width: "10%",
+              }}
             >
-              <Input label="MM/YY" defaultValue={token.duration} />
-              <Input label="CVC" defaultValue={token.cvc} />
-              <Input label="ZIP" defaultValue={token.zip} />
+              <div
+                style={{
+                  width: "23px",
+                  height: "23px",
+                  backgroundColor: "#d5d2d2",
+                  borderRadius: "50%",
+                  padding: "4px",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <Down />
+              </div>
+            </div>
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              padding: "10px 15px",
+              border: "1px solid #d0d0d0",
+            }}
+          >
+            <label style={{ color: "gray", width: "30%", padding: "0 0 0 0" }}>
+              Ship to
+            </label>
+            <input
+              style={{
+                color: "black",
+                width: "70%",
+                outline: "none",
+                border: "1px solid transparent",
+              }}
+              placeholder="120 10th Street"
+              defaultValue={`${token.delivery} `}
+            />
+            <div
+              style={{
+                width: "10%",
+              }}
+            >
+              <div
+                style={{
+                  width: "23px",
+                  height: "23px",
+                  backgroundColor: "#d5d2d2",
+                  borderRadius: "50%",
+                  padding: "4px",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <Down />
+              </div>
+            </div>
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              padding: "10px 15px",
+              border: "1px solid #d0d0d0",
+            }}
+          >
+            <label style={{ color: "gray", width: "30%", padding: "0 0 0 0" }}>
+              Payment
+            </label>
+            <input
+              style={{
+                color: "black",
+                width: "70%",
+                outline: "none",
+                border: "1px solid transparent",
+              }}
+              placeholder="1234"
+              defaultValue={`${token.creditCard} ${token.duration} ${token.cvc} ${token.zip} `}
+            />
+            <div
+              style={{
+                width: "10%",
+              }}
+            >
+              <div
+                style={{
+                  width: "23px",
+                  height: "23px",
+                  backgroundColor: "#d5d2d2",
+                  borderRadius: "50%",
+                  padding: "4px",
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
+                <Down />
+              </div>
             </div>
           </div>
         </form>
