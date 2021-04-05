@@ -16,7 +16,14 @@ const Item = () => {
 
   function buy() {
     setLoading(true);
-    history.push("/register");
+
+    const token = localStorage.getItem("fastcheckout");
+
+    if (token) {
+      history.push("/orderreceived");
+    } else {
+      history.push("/register");
+    }
 
     setLoading(false);
 
