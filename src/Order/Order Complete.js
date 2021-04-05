@@ -2,7 +2,7 @@ import React from "react";
 import CheckCircle from "../Components/CheckCircle";
 import Button from "../Components/button";
 import Spacer from "../Components/Spacer";
-
+import Timer from "../Components/Timer";
 const OrderComplete = () => {
   return (
     <div
@@ -56,7 +56,8 @@ const OrderComplete = () => {
           textAlign: "justify",
         }}
       >
-        5:36 to make changes or cancel before your card is charged.
+        <Timer />
+        to make changes or cancel before your card is charged.
       </div>
 
       <div
