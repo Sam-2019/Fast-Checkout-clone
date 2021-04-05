@@ -2,15 +2,18 @@ import React from "react";
 import Button from "../Components/button";
 import Spacer from "../Components/Spacer";
 import Lock from "../Components/lock";
+import Spinner from "../Components/spinner";
 import "./product.css";
 
-const InsideButton = () => (
+export const InsideButton = () => (
   <div className="inside_button">
     <Lock /> {"  "} Fast Checkout
   </div>
 );
 
 const Product = () => {
+
+  const [loading, setLoading] = React.useState(false);
   return (
     <>
       <div className="product_detail">

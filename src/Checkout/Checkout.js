@@ -1,14 +1,21 @@
 import React from "react";
 import Form from "../Form/Form";
+import { InsideButton } from "../Product/Product";
 import Button from "../Components/button";
 import Lock from "../Components/lock";
 import Spacer from "../Components/Spacer";
 import Shipping from "../Shipping/Shipping";
 import Terms from "../Terms/Terms";
+import Spinner from "../Components/spinner";
 import "./checkout.css";
 
 const Checkout = () => {
   const [value, setValue] = React.useState("Pick your location");
+  const [loading, setLoading] = React.useState(false);
+
+  function checkout() {
+    setLoading(true);
+  }
   return (
     <div className="checkout">
       <div className="company_price">
@@ -74,7 +81,12 @@ const Checkout = () => {
             padding: "0 10px",
           }}
         >
-          <Button name={<InsideButton />} className="primary" />
+          <Button
+            name={loading ? <Spinner /> : <InsideButton />}
+            className="primary"
+            loading={loading}
+            action={checkout}
+          />
         </div>
       </div>
     </div>
@@ -82,9 +94,3 @@ const Checkout = () => {
 };
 
 export default Checkout;
-
-const InsideButton = () => (
-  <div className="inside_button">
-    <Lock /> {"  "} Fast Checkout
-  </div>
-);
