@@ -12,7 +12,7 @@ const Checkout = () => {
   const [loading, setLoading] = React.useState(false);
 
   function checkout() {
-    setLoading(true);
+    //setLoading(true);
   }
   return (
     <div className="checkout">
