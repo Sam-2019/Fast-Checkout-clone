@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import Navigation from "./Navigation/Navigation";
+import styled from "styled-components";
 import Product from "./Product/Product";
 import Checkout from "./Checkout/Checkout";
 import Form from "./Form/Another Form";
@@ -8,9 +8,21 @@ import Coupon from "./Components/Add Coupon";
 import Order from "./Order/Order";
 import OrderReceived from "./Order/Order Received";
 
+const Body = styled.div`
+  background-color: #ffffff34;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: margin 0.5s;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+`;
+
 const App = () => {
   return (
-    <div className="body">
+    <Body>
       <Product />
 
       {/* <Button name="Fast Checkout" className="primary" />
@@ -19,7 +31,7 @@ const App = () => {
       <Button name="View/Cancel Order" className="tertiary" />
       <Button name="Keep Shopping" className="secondary" />
       <Button name="Add to cart" className="secondary" /> */}
-    </div>
+    </Body>
   );
 };
 
