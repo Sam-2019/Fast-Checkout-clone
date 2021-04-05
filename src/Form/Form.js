@@ -13,8 +13,6 @@ const Form = () => {
   const [cvc, setCVC] = React.useState("");
   const [zip, setZip] = React.useState("");
 
-  console.log(email);
-
   return (
     <form className="form-wrapper">
       <div>
