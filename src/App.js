@@ -11,7 +11,7 @@ import Product from "./Product/Product";
 import Checkout from "./Checkout/Checkout";
 import Register from "./Register/Register";
 import OrderReceived from "./Order/Order Received";
-import OrderComplete from "./Order/Order Complete";
+import Order from "./Order/Order";
 
 const Body = styled.div`
   background-color: #ffffff34;
@@ -47,8 +47,8 @@ const App = () => {
           <Checkout />
         </Route>
 
-        <Route path="/ordercomplete">
-          <OrderComplete />
+        <Route path="/order">
+          <Order />
         </Route>
       </Switch>
     </Router>
