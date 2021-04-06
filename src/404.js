@@ -11,13 +11,19 @@ const NotFound = () => {
         style={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: 'center',
-          margin: 'auto 0',
+          justifyContent: "center",
+          margin: "auto 0",
           alignItems: "center",
           padding: "10px 15px",
         }}
       >
-        <p>Sorry we're unable to find the page you're looking for.</p>
+        <p
+          style={{
+            textAlign: "center",
+          }}
+        >
+          Sorry we're unable to find the page you're looking for.
+        </p>
 
         <Button
           name="Go home"
