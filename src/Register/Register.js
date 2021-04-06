@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom";
 import { InsideButton } from "../Item/Item";
 import Button from "../Components/button";
 import Spacer from "../Components/Spacer";
-import Shipping from "../Shipping/Shipping";
 import Terms from "../Terms/Terms";
 import Input from "../Components/input2";
 
@@ -22,6 +21,8 @@ const Register = () => {
   const [duration, setDuration] = React.useState("");
   const [cvc, setCVC] = React.useState("");
   const [zip, setZip] = React.useState("");
+
+  const [shipping, setShipping] = React.useState("");
 
   async function checkout(event) {
     event.preventDefault();
@@ -228,7 +229,18 @@ const Register = () => {
         selected_unit="percentage"
       />
 
-      <Shipping />
+      <div
+        style={{
+          backgroundColor: "white",
+        }}
+      >
+        <Input
+          label="Shipping "
+          value={shipping}
+          type="text"
+          setValue={(e) => setShipping(e.target.value)}
+        />
+      </div>
 
       <Spacer
         bottom={5}
