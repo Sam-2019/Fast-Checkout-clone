@@ -20,7 +20,7 @@ const Item = () => {
     const token = localStorage.getItem("fastcheckout");
 
     if (token) {
-      history.push("/orderreceived");
+      history.push("/ordercomplete");
     } else {
       history.push("/register");
     }
