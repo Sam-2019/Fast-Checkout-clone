@@ -1,10 +1,10 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import OrderComplete from "./Order Complete";
 import Coupon from "../Components/Add Coupon";
 import OtherForm from "../Form/Another Form";
 import Shipping from "../Shipping/Shipping";
 import Spacer from "../Components/Spacer";
-
 
 const Order = () => {
   return (
@@ -52,6 +52,12 @@ const Order = () => {
 export default Order;
 
 export const OrderActions = () => {
+  let history = useHistory();
+
+  function close() {
+    history.push("/");
+  }
+
   return (
     <div
       style={{
@@ -70,7 +76,9 @@ export const OrderActions = () => {
     >
       <div className="secondary-two"> Cancel Order</div>
 
-      <div className="primary-two">Close</div>
+      <div className="primary-two" onClick={close}>
+        Close
+      </div>
     </div>
   );
 };
