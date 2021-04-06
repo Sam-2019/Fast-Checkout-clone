@@ -10,6 +10,7 @@ import Checkout from "./Checkout/Checkout";
 import Register from "./Register/Register";
 import OrderReceived from "./Order/Order Received";
 import Order from "./Order/Order";
+import NotFound from './404'
 
 const App = () => {
   return (
@@ -34,6 +35,10 @@ const App = () => {
         <Route path="/order">
           <Order />
         </Route>
+
+        <Route>
+        <NotFound />
+      </Route>
       </Switch>
     </Router>
   );
