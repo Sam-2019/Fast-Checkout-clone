@@ -67,7 +67,7 @@ const Register = () => {
       history.push("/checkout");
     }
 
-    setLoading(false);
+ 
   }
 
   return (
