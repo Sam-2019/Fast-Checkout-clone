@@ -40,7 +40,8 @@ const Register = () => {
       creditCard &&
       duration &&
       cvc &&
-      zip;
+      zip &&
+      shipping;
 
     if (empty === "") {
       alert("no value");
