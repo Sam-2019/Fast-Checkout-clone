@@ -15,25 +15,20 @@ const Item = () => {
   let history = useHistory();
 
   function buy() {
+    const token = localStorage.getItem("fastcheckout");
     setLoading(true);
 
-    const token = localStorage.getItem("fastcheckout");
+    const timer = setTimeout(() => {
+      setLoading(false);
 
-    if (token) {
-      history.push("/ordercomplete");
-    } else {
-      history.push("/register");
-    }
+      if (token) {
+        history.push("/order");
+      } else {
+        history.push("/register");
+      }
+    }, 1000);
 
-    setLoading(false);
-
-    // if (token) {
-    //   return;
-    // }
-
-    // if (!token) {
-
-    // }
+    return () => clearTimeout(timer);
   }
 
   return (

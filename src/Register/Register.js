@@ -64,10 +64,13 @@ const Register = () => {
 
       await localStorage.setItem("fastcheckout", JSON.stringify(person));
 
-      history.push("/checkout");
-    }
+      const timer = setTimeout(() => {
+        setLoading(false);
+        history.push("/checkout");
+      }, 1000);
 
- 
+      return () => clearTimeout(timer);
+    }
   }
 
   return (
