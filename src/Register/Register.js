@@ -26,7 +26,6 @@ const Register = () => {
 
   async function checkout(event) {
     event.preventDefault();
-    setLoading(true);
 
     const array = new Uint32Array(1);
     const index = window.crypto.getRandomValues(array);
@@ -48,6 +47,7 @@ const Register = () => {
     }
 
     if (empty !== "") {
+      setLoading(true);
       const person = {
         email: email,
         fname: fname,
