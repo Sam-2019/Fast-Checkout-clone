@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import { Popup } from "../Components/styles";
 import { InsideButton } from "../Item/Item";
 import Button from "../Components/button";
 import Spacer from "../Components/Spacer";
@@ -9,34 +9,6 @@ import Down from "../Components/chevronDown";
 import Success from "../Components/success";
 import "./checkout.css";
 
-const Popup = styled.div`
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  background-color: white;
-  -webkit-transition: all ease 0.7s;
-  transition: all ease 0.7s;
-  z-index: 11;
-  animation-name: fade-in;
-  animation-duration: 0.5s;
-  animation-delay: 0s;
-  animation-fill-mode: forwards;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-`;
-
 const Checkout = () => {
   const [value, setValue] = React.useState("Pick your location");
   const [success, setSuccess] = React.useState(false);
@@ -45,9 +17,16 @@ const Checkout = () => {
   const token = JSON.parse(window.localStorage.getItem("fastcheckout"));
 
   function checkout() {
-    if (token) {
-      setSuccess(true);
-    }
+    setLoading(true);
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+      if (token) {
+        setSuccess(true);
+      }
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }
   return (
     <>
@@ -321,7 +300,6 @@ const Checkout = () => {
 
       {success ? (
         <Popup>
-
           <Success />
         </Popup>
       ) : null}
