@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const padTime = (time) => {
   return String(time).length === 1 ? `0${time}` : `${time}`;
