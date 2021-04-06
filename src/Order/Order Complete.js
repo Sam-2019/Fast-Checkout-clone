@@ -1,9 +1,21 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import CheckCircle from "../Components/CheckCircle";
 import Button from "../Components/button";
 import Spacer from "../Components/Spacer";
 import Timer from "../Components/Timer";
+
 const OrderComplete = () => {
+  let history = useHistory;
+
+  function viewOrder() {
+    history.push("/orderreceived");
+  }
+
+  function goHome() {
+    history.push("/");
+  }
+
   return (
     <div
       className="order_wrapper"
@@ -68,9 +80,17 @@ const OrderComplete = () => {
           padding: "0 ",
         }}
       >
-        <Button name="View/Cancel Order" className="tertiary width-100 " />
+        <Button
+          name="View/Cancel Order"
+          className="tertiary width-100 "
+          action={viewOrder}
+        />
         <Spacer bottom={0} top={0} right={0} left={0} selected_unit="pixel" />
-        <Button name="Keep Shopping" className="secondary width-100 " />
+        <Button
+          name="Keep Shopping"
+          className="secondary width-100 "
+          action={goHome}
+        />
       </div>
     </div>
   );
