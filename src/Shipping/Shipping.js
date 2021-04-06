@@ -20,7 +20,11 @@ const Shipping = () => {
 
         <div className="shipping_select">
           <div className="" onClick={free}>
-            {state ? <Circle /> : <CheckCircle width={30} height={30}  color="green" />}
+            {state ? (
+              <CheckCircle width={30} height={30} color="green" />
+            ) : (
+              <Circle />
+            )}
           </div>
         </div>
       </div>
@@ -30,7 +34,11 @@ const Shipping = () => {
 
         <div className="shipping_select">
           <div className="" onClick={free}>
-            {value ? <Circle /> : <CheckCircle width={30} height={30}  color="green"/>}
+            {value ? (
+              <CheckCircle width={30} height={30} color="green" />
+            ) : (
+              <Circle />
+            )}
           </div>
         </div>
       </div>
