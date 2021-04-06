@@ -6,7 +6,7 @@ import Spacer from "../Components/Spacer";
 import Timer from "../Components/Timer";
 
 const OrderComplete = () => {
-  let history = useHistory;
+  let history = useHistory();
 
   function viewOrder() {
     history.push("/orderreceived");
