@@ -24,6 +24,7 @@ const Popup = styled.div`
   animation-delay: 0s;
   animation-fill-mode: forwards;
   display: flex;
+  flex-direction: column;
   align-content: center;
 
   @keyframes fade-in {
@@ -73,7 +74,6 @@ const Checkout = () => {
               <option value="coconut">Coconut</option>
               <option value="mango">Mango</option>
             </select>
-            
           </div>
         </div>
 
@@ -321,6 +321,7 @@ const Checkout = () => {
 
       {success ? (
         <Popup>
+
           <Success />
         </Popup>
       ) : null}
